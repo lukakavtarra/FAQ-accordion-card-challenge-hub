@@ -1,0 +1,81 @@
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    /* padding: 0em 12em; */
+    margin: 11rem 14rem;
+    background: linear-gradient( 0.26turn, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.container {
+    border: none;
+    padding: 1em 11em 4.5em 26em;
+    height: 11%;
+    background-image: url(../images/bg-pattern-desktop.svg), url(../images/illustration-woman-online-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -34%, -13%;
+    background-position-y: 32%, 15%;
+    background-size: 47%, 43%;
+    background-color: white;
+    border-radius: 1.4rem;
+    box-shadow: 0px 32px 105px -15px #00000073;
+}
+
+.accordion-link {
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    line-height: 3em;
+    justify-content: space-between;
+    color: hsl(237, 12%, 33%);
+}
+
+.answer {
+    border-bottom: 0.1px solid hsl(240, 5%, 91%);
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+    font-weight: 400 !important;
+    font-size: 12px;
+    color: hsl(240, 6%, 50%);
+}
+
+.answer::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.accordion-item:target .answer {
+    max-height: 20rem;
+}
+
+.accordion-link .ion-md-arrow-dropup {
+    display: none;
+}
+
+.accordion-item:target .accordion-link .ion-md-arrow-dropdown {
+    display: none;
+}
+
+.accordion-item:target .accordion-link .ion-md-arrow-dropup {
+    display: block;
+}
+
+.accordion-item:target {
+    font-weight: 700;
+}
+
+.box {
+    position: absolute;
+    top: 19.5rem;
+    left: 6.5rem;
+}
+
+.accordion-link:hover {
+    cursor: pointer;
+    color: hsl(14, 88%, 65%);
+}
+
+.illustration {
+    display: none;
+}
